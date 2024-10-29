@@ -8,54 +8,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    
     <div class="wrapper">
         <div class="container">
-            <h1>Password Generator</h1>
-            
-            <div class="">
-                <input type="password">
-                <button>
-                    <i class="fa-regular fa-copy fa-xl" style="color: #74C0FC;"></i>
-                </button>
-            </div>
-            
-            <div class="">
-                <p>Password Length</p>
-                <p>0</p>
-            </div>
 
-            <input type="range" min="0"  max="20">
+            <p id="passwordtoptext">PASSWORD GENERATOR</p>
 
-            <div class="">
-                <input type="checkbox" name="" id="foruppercase">
-                <label for="foruppercase">Include Uppercase Letter</label>
-            </div>
-            
-            <div class="">
-                <input type="checkbox" name="" id="forlowercase">
-                <label for="forlowercase">Include Lowercase Letter</label>
-            </div>
+            <!-- password section -->
+             <div class="passwordisplaysection">
+                <input type="text"  readonly name="" id="" placeholder="password" displaypassword class="password">
 
-            
-            <div class="">
-                <input type="checkbox" name="" id="fornumber">
-                <label for="fornumber">Include Numbers</label>
-            </div>
+                <div class="copybtnsection">
+                    <button copybtn>
+                        <i class="fa-regular fa-copy fa-2xl" style="color: #74C0FC;"></i>
+                    </button>
+                    <div copymsg class="copymessage"></div>
+                </div>
+             </div>
 
-            
-            <div class="">
-                <input type="checkbox" name="" id="forsymbol">
-                <label for="forsymbol">Include Symbols</label>
-            </div>
+             <!-- password setting section -->
+              <div class="passwordsettingsection">
+                 
+                <div class="passwordlengthsection">
+                    <p>Password Length</p>
+                    <p passwordlenghtset>0</p>
+                </div>
 
-            <div class="">
-                <P>strength</P>
-                <button>Generate Password</button>
+                <input type="range" name="" id="" min="0" max="20" step="1" inputslider class="slider">
 
-            </div>
+                <div class="checkboxessection">
+
+                    <div class="allcheckboxes">
+                    <input type="checkbox" name="" id="uppercase">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                    </div>
+
+                    <div class="allcheckboxes" >
+                        <input type="checkbox" name="" id="lowercase" >
+                        <label for="lowercase">Include Lower Letters</label>
+                    </div>
+
+                    <div class="allcheckboxes">
+                        <input type="checkbox" name="" id="numbersss" >
+                    <label for="numbersss">Include Numbers</label>
+                    </div>
+
+                   <div class="allcheckboxes">   
+                    <input type="checkbox" name="" id="symbolsss" >
+                    <label for="symbolsss">Include Symbols</label>
+                    </div>
+
+                </div>
+
+
+                <div class="strengthsection">
+                    <p>Strength</p>
+                    <div indicatorbtn></div>
+                </div>
+                 
+
+                <button generatebtn  id="GENERATEBUTTON" >GENERATE PASSWORD</button>
+              </div>
 
         </div>
     </div>
+    
     <!-- js functionalities -->
     <script src="script.js"></script>
 </body>
